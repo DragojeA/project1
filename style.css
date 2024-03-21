@@ -1,53 +1,71 @@
-*{
+* {
   margin: 0%;
   padding: 0%;
-  font-family: 'Poppins', sans-serif; 
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
 }
-.container{
+.container {
   width: 100%;
   min-height: 100vh;
   padding: 10px;
+  background: linear-gradient(
+    rgba(10, 10, 10, 0.61),
+    rgba(206, 206, 123, 0.774)
+  );
 }
-.todo-app{
+.todo-app {
   width: 100%;
   margin: 100px auto 20px;
   padding: 40px 30px 70px;
+  background-color: #fff;
+  border-radius: 10px;
+  max-width: 540px;
 }
-.todo-app h2{
+.todo-app h2 {
   color: #002765;
   margin-bottom: 20px;
-}
-.todo-app h2 img{
   display: flex;
+  align-items: center;
+  font-family: sans-serif;
+  font-style: oblique;
+}
+.todo-app h2 img {
+  display: flex;
+  width: 100px;
+  margin-left: 10px;
 }
 .row {
   background: #edeef0;
   border-radius: 30px;
   padding-left: 20px;
   margin-bottom: 25px;
+  justify-self: auto;
 }
-input{
+input {
   flex: 1;
   border: none;
   outline: none;
   padding: 10px;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Times New Roman", Times, serif;
   font-size: 18px;
+  background: transparent;
 }
-button{
+button {
   outline: none;
   padding: 16px 30px;
   color: #fff;
   font-size: 16px;
   border-radius: 40px;
 }
-ul li{
+ul li {
   font-size: 18px;
   padding: 12px 8px 12px 50px;
   user-select: none;
   cursor: pointer;
+  list-style: none;
+  position: relative;
 }
-ul li::before{
+ul li::before {
   position: absolute;
   height: 25px;
   width: 25px;
@@ -56,14 +74,17 @@ ul li::before{
   background-position: center;
   top: 8px;
   left: 8px;
+  content: none;
+  background-image: url(https://icons.veryicon.com/png/o/miscellaneous/questionnaire-icon/unchecked-10.png);
 }
-ul li.checked{
+ul li.checked {
   color: #1c1a1a;
+  text-decoration: line-through;
 }
-ul li.checked::before{
-  background-image: url();
+ul li.checked::before {
+  background-image: url(https://icons.veryicon.com/png/o/miscellaneous/wens/checked-3.png);
 }
-ul li span{
+ul li span {
   position: absolute;
   right: 0;
   top: 10px;
@@ -75,6 +96,6 @@ ul li span{
   text-align: center;
   border-radius: 50%;
 }
-ul li span:hover{
+ul li span:hover {
   background: #edeef0;
 }
